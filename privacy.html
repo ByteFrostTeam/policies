@@ -50,7 +50,7 @@
 <body>
     <h1>Privacy Policy</h1>
     <p class="effective-date">Effective Date: November 19, 2025</p>
-    <p class="effective-date">Last Updated: September 26, 2026</p>
+    <p class="effective-date">Last Updated: November 18, 2026</p>
 
     <div class="section">
         <p>ByteFrost AB ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this Privacy Policy carefully.</p>
@@ -85,13 +85,14 @@
             <li>Other health metrics you choose to sync</li>
         </ul>
         <p><strong>Important:</strong> Health data synchronization is entirely optional and requires your explicit consent. You can enable or disable this feature at any time in the App settings. Health data is accessed through Apple Health (iOS) or Google Health Connect (Android) and is subject to their respective privacy policies.</p>
+        <p>If you have Pro and allow AI-written weekly notes, last week's totals from health data (such as your step count) are included in what we send to OpenAI to write your note, as described in Section 1.6.</p>
 
         <h3>1.4 Payment Information</h3>
         <p>When you purchase a subscription:</p>
         <ul>
             <li>Payment processing is handled entirely by Apple App Store or Google Play Store</li>
             <li>We do not collect, store, or have access to your payment card information</li>
-            <li>We receive only basic transaction information (such as whether a purchase was successful) from RevenueCat, our subscription management service</li>
+            <li>From RevenueCat, our subscription management service, we receive your subscription status and plan: whether you are on the free version, in a free trial, subscribed or expired, which plan you have, whether it renews, and its purchase and expiry dates. We store this with your account to provide Pro features and to understand how many people subscribe</li>
         </ul>
 
         <h3>1.5 Advertising Measurement (Attribution)</h3>
@@ -105,7 +106,17 @@
         <p>On Android, your device's advertising ID is used unless you have deleted it in your device settings.</p>
         <p>If you are in the EEA, UK or Switzerland, AppsFlyer is told whether you have consented (on iOS, by allowing tracking). Without your consent, AppsFlyer is instructed not to use your data for ad personalization or share it for advertising, and your purchase events are not sent to AppsFlyer through RevenueCat.</p>
 
-        <h3>1.6 Information We Do NOT Collect</h3>
+        <h3>1.6 Weekly Notes and AI Processing (Pro)</h3>
+        <p>With a Pro subscription, the App writes you a short note about your past week. The note is written with OpenAI, an AI service, and only after you allow it in the App. When you allow it, the App sends the following to OpenAI through our servers:</p>
+        <ul>
+            <li>The names of your habits</li>
+            <li>Last week's numbers: the days you planned and completed each habit, totals such as minutes or steps (including steps from Apple Health or Google Health Connect, if you use them), and your trophy and marble totals</li>
+            <li>Your answer to "How was your week?" about the previous week, if you gave one</li>
+        </ul>
+        <p>We do not send your name, email address, account ID or device identifiers to OpenAI. OpenAI uses this data only to write your note and returns the text to us. We store the note and your "How was your week?" answers with your account on our servers. Under OpenAI's API terms, data sent through its API is not used to train its models, and OpenAI may keep it for up to 30 days to detect abuse before deleting it.</p>
+        <p>You can turn AI-written notes off at any time in the App settings. While they are off, nothing is sent to OpenAI and the App shows a simpler note created on your device. If you use the free version, nothing is sent to OpenAI.</p>
+
+        <h3>1.7 Information We Do NOT Collect</h3>
         <p>We do not collect:</p>
         <ul>
             <li>Your name or physical address</li>
@@ -122,6 +133,7 @@
             <li><strong>Provide and maintain the App:</strong> Store your habits, goals, and progress across your devices</li>
             <li><strong>Authenticate your account:</strong> Verify your identity when you sign in</li>
             <li><strong>Sync your data:</strong> Enable access to your data across multiple devices</li>
+            <li><strong>Write your weekly note (Pro):</strong> With your permission, using OpenAI, as described in Section 1.6</li>
             <li><strong>Process payments:</strong> Manage your subscription through our payment processor</li>
             <li><strong>Improve the App:</strong> Understand how the App is used to fix bugs and improve features</li>
             <li><strong>Measure our advertising:</strong> Understand which ads lead to installs, trials and subscriptions (see Section 1.5)</li>
@@ -158,14 +170,14 @@
         <h3>4.1 Supabase</h3>
         <ul>
             <li><strong>Purpose:</strong> Database hosting and user authentication</li>
-            <li><strong>Data shared:</strong> Account ID, email address (if you sign in), habit and goal data, to-dos, profile name and avatar, friend connections, and introduction progress</li>
+            <li><strong>Data shared:</strong> Account ID, email address (if you sign in), habit and goal data, to-dos, profile name and avatar, friend connections, introduction progress, weekly notes and your "How was your week?" answers, and your subscription status</li>
             <li><strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></li>
         </ul>
 
         <h3>4.2 RevenueCat</h3>
         <ul>
             <li><strong>Purpose:</strong> Subscription management and payment processing</li>
-            <li><strong>Data shared:</strong> User identifier, subscription status, purchase history</li>
+            <li><strong>Data shared:</strong> User identifier (including your App account ID, so your subscription can be matched to your account), subscription status, purchase history</li>
             <li><strong>Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></li>
         </ul>
 
@@ -200,6 +212,13 @@
                 </ul>
             </li>
         </ul>
+
+        <h3>4.6 OpenAI (Pro, Only If You Allow It)</h3>
+        <ul>
+            <li><strong>Purpose:</strong> Writing your weekly note, as described in Section 1.6</li>
+            <li><strong>Data shared:</strong> Habit names, last week's habit numbers (including health-based totals such as steps), trophy and marble totals, and your "How was your week?" answer. Not your name, email address, account ID or device identifiers</li>
+            <li><strong>Privacy Policy:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank">https://openai.com/policies/privacy-policy</a></li>
+        </ul>
     </div>
 
     <div class="section">
@@ -207,7 +226,7 @@
         <p>We do not sell, trade, or rent your personal information to third parties.</p>
         <p>We may share your information only in the following circumstances:</p>
         <ul>
-            <li><strong>Service Providers:</strong> With third-party service providers (Supabase, RevenueCat, AppsFlyer) who help us operate the App, as described in Section 4</li>
+            <li><strong>Service Providers:</strong> With third-party service providers (Supabase, RevenueCat, AppsFlyer, and OpenAI if you allow AI-written weekly notes) who help us operate the App, as described in Section 4</li>
             <li><strong>Advertising Platforms:</strong> Attribution results (for example, that an install or subscription came from a specific ad campaign) are shared with the advertising platforms we use, as described in Section 4.4</li>
             <li><strong>Legal Requirements:</strong> If required by law, court order, or governmental regulation</li>
             <li><strong>Protection of Rights:</strong> To protect our rights, property, or safety, or that of our users or the public</li>
@@ -232,7 +251,7 @@
             <li>All your personal information is permanently deleted from our servers</li>
             <li>Your habits, goals, and tracking data are permanently deleted</li>
             <li>This action cannot be undone</li>
-            <li>If you are signed in, you can delete your account through the App settings. If you use the App anonymously, copy your User ID from the App settings and email it to contact@byte-frost.com, and we will delete your data within 30 days (see <a href="account-deletion.html">Account Deletion</a>)</li>
+            <li>If you are signed in, you can delete your account through the App settings. Your data is deleted from our servers right away; if that can't be completed at that moment, your request is saved and we complete it within 7 days. If you use the App anonymously, copy your User ID from the App settings and email it to contact@byte-frost.com, and we will delete your data within 30 days (see <a href="account-deletion.html">Account Deletion</a>)</li>
         </ul>
 
         <h3>6.3 Modify Your Information</h3>
@@ -244,7 +263,10 @@
         <h3>6.5 Opt Out of Tracking</h3>
         <p>You can allow or deny tracking when the App asks, and change your choice at any time in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking. On Android, you can reset or delete your advertising ID in your device settings.</p>
 
-        <h3>6.6 Additional Rights (EEA/UK Residents)</h3>
+        <h3>6.6 Turn Off AI-Written Weekly Notes</h3>
+        <p>You can allow or turn off AI-written weekly notes at any time in the App settings. While they are off, nothing is sent to OpenAI.</p>
+
+        <h3>6.7 Additional Rights (EEA/UK Residents)</h3>
         <p>If you are located in the European Economic Area (EEA) or United Kingdom, you have additional rights under the General Data Protection Regulation (GDPR):</p>
         <ul>
             <li>Right to access your personal data</li>
@@ -266,6 +288,8 @@
             <li><strong>Anonymous users:</strong> We retain your data until you ask us to delete it by contacting contact@byte-frost.com</li>
             <li><strong>Signed-in users:</strong> We retain your data until you delete your account</li>
             <li><strong>After account deletion:</strong> All personal data stored on our servers is permanently deleted within 30 days</li>
+            <li><strong>Weekly notes and "How was your week?" answers:</strong> Kept with your account and deleted when your account is deleted</li>
+            <li><strong>Data sent to OpenAI:</strong> OpenAI may keep it for up to 30 days to detect abuse, then deletes it (see Section 1.6)</li>
             <li><strong>Advertising measurement data:</strong> Data collected by AppsFlyer (see Section 1.5) is not linked to your App account and is not removed when you delete your account. AppsFlyer retains it according to its own retention policy. To request its deletion, contact us and we will forward your request to AppsFlyer</li>
             <li><strong>Subscription records:</strong> RevenueCat, Apple and Google keep records of your purchases as required for accounting and legal purposes</li>
             <li><strong>Legal obligations:</strong> We may retain certain information if required by law or for legitimate business purposes (such as fraud prevention)</li>
@@ -275,7 +299,7 @@
     <div class="section">
         <h2>8. International Data Transfers</h2>
         <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country.</p>
-        <p>Our service providers (Supabase, RevenueCat, AppsFlyer) may process data in various locations worldwide. When we transfer your data internationally, we ensure appropriate safeguards are in place to protect your information in accordance with applicable data protection laws.</p>
+        <p>Our service providers (Supabase, RevenueCat, AppsFlyer, and OpenAI, which processes data in the United States) may process data in various locations worldwide. When we transfer your data internationally, we ensure appropriate safeguards are in place to protect your information in accordance with applicable data protection laws.</p>
     </div>
 
     <div class="section">
@@ -318,8 +342,9 @@
         <ul>
             <li><strong>Health data synchronization:</strong> Only if you turn it on</li>
             <li><strong>Tracking for advertising measurement:</strong> Only if you allow it in Apple's App Tracking Transparency prompt (see Section 1.5)</li>
+            <li><strong>AI-written weekly notes (Pro):</strong> Only if you allow it when the App asks (see Section 1.6)</li>
         </ul>
-        <p>You can withdraw your consent at any time, as described in Sections 6.4 and 6.5. Withdrawing consent does not affect processing that took place before you withdrew it. For all other processing, the legal basis is described in Section 15.</p>
+        <p>You can withdraw your consent at any time, as described in Sections 6.4, 6.5 and 6.6. Withdrawing consent does not affect processing that took place before you withdrew it. For all other processing, the legal basis is described in Section 15.</p>
     </div>
 
     <div class="contact-info">
@@ -336,7 +361,7 @@
         <h2>15. Legal Basis for Processing (EEA/UK Residents)</h2>
         <p>If you are located in the EEA or UK, our legal basis for collecting and using your personal information depends on the specific information and context:</p>
         <ul>
-            <li><strong>Consent:</strong> When you provide explicit consent (e.g., health data synchronization, or allowing tracking for advertising measurement)</li>
+            <li><strong>Consent:</strong> When you provide explicit consent (e.g., health data synchronization, allowing tracking for advertising measurement, or allowing AI-written weekly notes)</li>
             <li><strong>Contract:</strong> When processing is necessary to provide the App services you've requested</li>
             <li><strong>Legitimate Interests:</strong> When we have a legitimate business interest (e.g., improving the App, fraud prevention) that doesn't override your rights</li>
             <li><strong>Legal Obligation:</strong> When we must comply with legal requirements</li>
@@ -345,7 +370,7 @@
 
     <div class="section" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;">
         <p style="font-size: 0.9em; color: #666;">
-            <strong>Summary:</strong> We collect minimal data (email and habit tracking data when you sign in, health data only if you opt in). We measure which ads bring people to the App, using your advertising identifier only if you allow tracking. We do not sell your data. You can export and delete your data at any time. We use industry-standard security measures to protect your information.
+            <strong>Summary:</strong> We collect minimal data (email and habit tracking data when you sign in, health data only if you opt in). We measure which ads bring people to the App, using your advertising identifier only if you allow tracking. If you have Pro and allow it, habit names and last week's numbers are sent to OpenAI to write your weekly note. We do not sell your data. You can export and delete your data at any time. We use industry-standard security measures to protect your information.
         </p>
     </div>
 </body>
